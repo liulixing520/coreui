@@ -7,7 +7,12 @@
           <b-col md="6">
             <b-card>
               <div slot="header">
-                <strong>Horizontal</strong> Form
+                <strong>Horizontal</strong> F
+
+
+
+
+                orm
               </div>
               <b-form>
                 <b-form-group

@@ -87,6 +87,7 @@ const Message = () => import('@/views/apps/email/Message')
 //web views
 const RescourceManager = () => import('@/views/web/Tables')
 const CompanyInfo = () => import('@/views/web/companyMgr/companyInfo')
+const PublishResource = () => import('@/views/web/publishResource/publishResource')
 
 
 
@@ -121,6 +122,14 @@ const  routes=[
               }
             }
           ]
+        },
+        {
+          path: 'publishResource',
+          name: '公司信息管理',
+          component: PublishResource,
+          meta: {
+            requireAuth: false,
+          }
         },
         {
           path: 'theme',

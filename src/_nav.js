@@ -24,10 +24,57 @@ export default {
       icon: 'icon-drop'
     },
     {
-      name: '资源管理',
+      name: '员工管理',
+      url: '/rescourceManager',
+      icon: 'icon-pencil',
+      children: [
+        {
+          name: '员工信息',
+          url: '/base/breadcrumbs',
+          icon: 'icon-puzzle'
+        }]
+    },
+    {
+      name: '账户管理',
+      url: '/companyMgr/companyInfo',
+      icon: 'icon-drop',
+      children: [
+        {
+          name: '账户',
+          url: '/base/breadcrumbs',
+          icon: 'icon-puzzle'
+        },
+        {
+          name: '账户变更记录',
+          url: '/base/breadcrumbs',
+          icon: 'icon-puzzle'
+        }]
+    },
+    {
+      name: '订单管理',
       url: '/rescourceManager',
       icon: 'icon-pencil'
     },
+    {
+      name: '资源调取',
+      url: '/rescourceManager',
+      icon: 'icon-pencil'
+    },
+    {
+      name: '任务发布',
+      url: '/publishResource',
+      icon: 'icon-pencil'
+    },
+    {
+      name: '我的客服',
+      url: '/rescourceManager',
+      icon: 'icon-pencil'
+    },
+    // {
+    //   name: '资源管理',
+    //   url: '/rescourceManager',
+    //   icon: 'icon-pencil'
+    // },
     {
       title: true,
       name: 'Theme',
