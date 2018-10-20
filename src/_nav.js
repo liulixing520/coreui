@@ -25,35 +25,41 @@ export default {
     },
     {
       name: '员工管理',
-      url: '/rescourceManager',
+      url: '/employeeMgr',
       icon: 'icon-pencil',
       children: [
         {
-          name: '员工信息',
-          url: '/base/breadcrumbs',
-          icon: 'icon-puzzle'
+          name: '员工列表',
+          url: '/employeeMgr/employeeList',
+          icon: ''
         }]
     },
     {
       name: '账户管理',
-      url: '/companyMgr/companyInfo',
+      url: '/accountMgr',
       icon: 'icon-drop',
       children: [
         {
           name: '账户',
-          url: '/base/breadcrumbs',
-          icon: 'icon-puzzle'
+          url: '/accountMgr/accountInfo',
+          icon: ''
         },
         {
           name: '账户变更记录',
-          url: '/base/breadcrumbs',
-          icon: 'icon-puzzle'
+          url: '/accountMgr/accountChangeList',
+          icon: ''
         }]
     },
     {
       name: '订单管理',
-      url: '/rescourceManager',
-      icon: 'icon-pencil'
+      url: '/orderMgr',
+      icon: 'icon-pencil',
+      children: [
+        {
+          name: '我的订单',
+          url: '/orderMgr/orderList',
+          icon: ''
+        }]
     },
     {
       name: '资源调取',
@@ -61,10 +67,22 @@ export default {
       icon: 'icon-pencil'
     },
     {
-      name: '任务发布',
-      url: '/publishResource',
-      icon: 'icon-pencil'
+      name: '文章管理',
+      url: '/articleMgr',
+      icon: 'icon-pencil',
+      children: [
+        {
+          name: '文章发布',
+          url: '/articleMgr/articleCreate',
+          icon: ''
+        },
+        {
+          name: '文章列表',
+          url: '/articleMgr/articleList',
+          icon: ''
+        }]
     },
+
     {
       name: '我的客服',
       url: '/rescourceManager',

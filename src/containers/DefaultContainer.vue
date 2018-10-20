@@ -62,7 +62,12 @@
     </TheFooter>
   </div>
 </template>
+<style>
 
+  .sidebar .nav-dropdown .nav-dropdown-items a  {
+    padding-left: 2rem;
+  }
+</style>
 <script>
 import nav from '@/_nav'
 import { Header as AppHeader, SidebarToggler, Sidebar as AppSidebar, SidebarFooter, SidebarForm, SidebarHeader, SidebarMinimizer, SidebarNav, Aside as AppAside, AsideToggler, Footer as TheFooter, Breadcrumb } from '@coreui/vue'

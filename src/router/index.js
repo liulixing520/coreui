@@ -86,8 +86,14 @@ const Message = () => import('@/views/apps/email/Message')
 
 //web views
 const RescourceManager = () => import('@/views/web/Tables')
-const CompanyInfo = () => import('@/views/web/companyMgr/companyInfo')
+const CompanyInfo = () => import('@/views/web/companyMgr/CompanyInfo')
 const PublishResource = () => import('@/views/web/publishResource/publishResource')
+const ArticleCreate = () => import('@/views/web/articleMgr/ArticleCreate')
+const ArticleList = () => import('@/views/web/articleMgr/ArticleList')
+const AccountInfo = () => import('@/views/web/accountMgr/AccountInfo')
+const AccountChangeList = () => import('@/views/web/accountMgr/AccountChangeList')
+const EmployeeList = () => import('@/views/web/employeeMgr/EmployeeList')
+const OrderList = () => import('@/views/web/orderMgr/OrderList')
 
 
 
@@ -124,8 +130,95 @@ const  routes=[
           ]
         },
         {
+          path: 'accountMgr',
+          redirect: '/accountMgr/accountInfo',
+          name: '账户管理',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'accountInfo',
+              name: '账户信息',
+              component: AccountInfo,
+              meta: {
+                requireAuth: false,
+              }
+            },
+            {
+              path: 'accountChangeList',
+              name: '账户变更信息',
+              component: AccountChangeList,
+              meta: {
+                requireAuth: false,
+              }
+            }
+          ]
+        },
+        {
+          path: 'employeeMgr',
+          redirect: '/employeeMgr/employeeList',
+          name: '账户管理',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'employeeList',
+              name: '账户信息',
+              component: EmployeeList,
+              meta: {
+                requireAuth: false,
+              }
+            }
+          ]
+        },
+        {
+          path: 'orderMgr',
+          redirect: '/orderMgr/orderList',
+          name: '订单管理',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'orderList',
+              name: '订单列表',
+              component: OrderList,
+              meta: {
+                requireAuth: false,
+              }
+            }
+          ]
+        },
+        {
+          path: 'articleMgr',
+          redirect: '/articleMgr/articleCreate',
+          name: '文章管理',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'articleCreate',
+              name: '文章发布',
+              component: ArticleCreate,
+              meta: {
+                requireAuth: false,
+              }
+            },{
+              path: 'articleList',
+              name: '文章列表',
+              component: ArticleList,
+              meta: {
+                requireAuth: false,
+              }
+            }
+          ]
+        },
+        {
           path: 'publishResource',
-          name: '公司信息管理',
+          name: '任务发布',
           component: PublishResource,
           meta: {
             requireAuth: false,
