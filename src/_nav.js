@@ -46,7 +46,7 @@ export default {
         },
         {
           name: '账户变更记录',
-          url: '/accountMgr/accountChangeList',
+          url: '/accountMgr/breadcrumbs',
           icon: ''
         }]
     },
@@ -57,7 +57,7 @@ export default {
       children: [
         {
           name: '我的订单',
-          url: '/orderMgr/orderList',
+          url: '/orderMgr/myOrder',
           icon: ''
         }]
     },
