@@ -94,6 +94,7 @@ const AccountInfo = () => import('@/views/web/accountMgr/AccountInfo')
 const AccountChangeList = () => import('@/views/web/accountMgr/AccountChangeList')
 const EmployeeList = () => import('@/views/web/employeeMgr/EmployeeList')
 const OrderList = () => import('@/views/web/orderMgr/OrderList')
+const NewsOrderList = () => import('@/views/web/orderMgr/NewsOrderList')
 
 
 
@@ -188,6 +189,23 @@ const  routes=[
               meta: {
                 requireAuth: false,
               }
+            },
+            {
+              path: 'newOrder',
+              name: '新订单',
+              redirect: '/orderMgr/newOrder/news',
+              component: {
+                render (c) { return c('router-view') }
+              },
+              children: [
+                {
+                  path: 'news',
+                  name: '新闻订单',
+                  component: NewsOrderList,
+                  meta: {
+                    requireAuth: false,
+                  }
+                }]
             }
           ]
         },

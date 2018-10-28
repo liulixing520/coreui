@@ -36,48 +36,48 @@
         <div class="table-responsive-sm">
           <table class="table table-striped">
             <thead>
-              <tr>
-                <th class="center">#</th>
-                <th>Item</th>
-                <th>Description</th>
-                <th class="center">Quantity</th>
-                <th class="right">Unit Cost</th>
-                <th class="right">Total</th>
-              </tr>
+            <tr>
+              <th class="center">#</th>
+              <th>Item</th>
+              <th>Description</th>
+              <th class="center">Quantity</th>
+              <th class="right">Unit Cost</th>
+              <th class="right">Total</th>
+            </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="center">1</td>
-                <td class="left">Origin License</td>
-                <td class="left">Extended License</td>
-                <td class="center">1</td>
-                <td class="right">$999,00</td>
-                <td class="right">$999,00</td>
-              </tr>
-              <tr>
-                <td class="center">2</td>
-                <td class="left">Custom Services</td>
-                <td class="left">Instalation and Customization (cost per hour)</td>
-                <td class="center">20</td>
-                <td class="right">$150,00</td>
-                <td class="right">$3.000,00</td>
-              </tr>
-              <tr>
-                <td class="center">3</td>
-                <td class="left">Hosting</td>
-                <td class="left">1 year subcription</td>
-                <td class="center">1</td>
-                <td class="right">$499,00</td>
-                <td class="right">$499,00</td>
-              </tr>
-              <tr>
-                <td class="center">4</td>
-                <td class="left">Platinum Support</td>
-                <td class="left">1 year subcription 24/7</td>
-                <td class="center">1</td>
-                <td class="right">$3.999,00</td>
-                <td class="right">$3.999,00</td>
-              </tr>
+            <tr>
+              <td class="center">1</td>
+              <td class="left">Origin License</td>
+              <td class="left">Extended License</td>
+              <td class="center">1</td>
+              <td class="right">$999,00</td>
+              <td class="right">$999,00</td>
+            </tr>
+            <tr>
+              <td class="center">2</td>
+              <td class="left">Custom Services</td>
+              <td class="left">Instalation and Customization (cost per hour)</td>
+              <td class="center">20</td>
+              <td class="right">$150,00</td>
+              <td class="right">$3.000,00</td>
+            </tr>
+            <tr>
+              <td class="center">3</td>
+              <td class="left">Hosting</td>
+              <td class="left">1 year subcription</td>
+              <td class="center">1</td>
+              <td class="right">$499,00</td>
+              <td class="right">$499,00</td>
+            </tr>
+            <tr>
+              <td class="center">4</td>
+              <td class="left">Platinum Support</td>
+              <td class="left">1 year subcription 24/7</td>
+              <td class="center">1</td>
+              <td class="right">$3.999,00</td>
+              <td class="right">$3.999,00</td>
+            </tr>
             </tbody>
           </table>
         </div>
@@ -88,22 +88,22 @@
           <b-col lg="4" sm="5" class="ml-auto">
             <table class="table table-clear">
               <tbody>
-                <tr>
-                  <td class="left"><strong>Subtotal</strong></td>
-                  <td class="right">$8.497,00</td>
-                </tr>
-                <tr>
-                  <td class="left"><strong>Discount (20%)</strong></td>
-                  <td class="right">$1,699,40</td>
-                </tr>
-                <tr>
-                  <td class="left"><strong>VAT (10%)</strong></td>
-                  <td class="right">$679,76</td>
-                </tr>
-                <tr>
-                  <td class="left"><strong>Total</strong></td>
-                  <td class="right"><strong>$7.477,36</strong></td>
-                </tr>
+              <tr>
+                <td class="left"><strong>Subtotal</strong></td>
+                <td class="right">$8.497,00</td>
+              </tr>
+              <tr>
+                <td class="left"><strong>Discount (20%)</strong></td>
+                <td class="right">$1,699,40</td>
+              </tr>
+              <tr>
+                <td class="left"><strong>VAT (10%)</strong></td>
+                <td class="right">$679,76</td>
+              </tr>
+              <tr>
+                <td class="left"><strong>Total</strong></td>
+                <td class="right"><strong>$7.477,36</strong></td>
+              </tr>
               </tbody>
             </table>
             <a href="#" class="btn btn-success"><i class="fa fa-usd"></i> Proceed to Payment</a>

@@ -109,7 +109,7 @@ export default {
       children: [
         {
           name: '新订单',
-          url: '/newOrder',
+          url: '/orderMgr/newOrder/news',
           icon: ''
         },
         {
