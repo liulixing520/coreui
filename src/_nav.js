@@ -95,6 +95,73 @@ export default {
     // },
     {
       title: true,
+      name: '资源商菜单',
+      class: '',
+      wrapper: {
+        element: '',
+        attributes: {}
+      }
+    },
+    {
+      name: '订单管理',
+      url: '/orderMgr',
+      icon: 'icon-drop',
+      children: [
+        {
+          name: '新订单',
+          url: '/newOrder',
+          icon: ''
+        },
+        {
+          name: '问题订单',
+          url: '/problemOrder',
+          icon: ''
+        },
+        {
+          name: '已完成订单',
+          url: '/finishedOrder',
+          icon: ''
+        }]
+    },
+    {
+      name: '账户管理',
+      url: '/accountMgrZys',
+      icon: 'icon-drop',
+      children: [
+        {
+          name: '流水账单',
+          url: '/accountMgrZys/waterBill',
+          icon: ''
+        },
+        {
+          name: '提现',
+          url: '/accountMgrZys/withdrawCash',
+          icon: ''
+        },
+        {
+          name: '账户设置',
+          url: '/accountMgrZys/accountSetting',
+          icon: ''
+        }]
+    },
+    {
+      name: '资源商管理',
+      url: '/resourceMgr',
+      icon: 'icon-drop',
+      children: [
+        {
+          name: '资源商添加',
+          url: '/resourceMgr/newResource',
+          icon: ''
+        },
+        {
+          name: '我的资源',
+          url: '/resourceMgr/myResource',
+          icon: ''
+        }]
+    },
+    {
+      title: true,
       name: 'Theme',
       class: '',
       wrapper: {

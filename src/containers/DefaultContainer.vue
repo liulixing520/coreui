@@ -13,7 +13,13 @@
         <!--<b-nav-item class="px-3">Settings</b-nav-item>-->
       </b-navbar-nav>
       <b-navbar-nav class="ml-auto">
-        <b-nav-item class="d-md-down-none">
+        <b-nav-item class="px-3" to="/users" >
+          <b-button size="sm" variant="spotify" class="btn-brand"><i class="fa fa-spotify"></i><span>资源入住</span></b-button>
+        </b-nav-item>
+        <b-nav-item class="px-3" to="/users" >
+          <b-button size="sm" variant="flickr" class="btn-brand"><i class="fa fa-flickr"></i><span>订单咨询</span></b-button>
+        </b-nav-item>
+        <b-nav-item class="d-none d-lg-block">
           <DefaultHeaderDropdownNotif/>
         </b-nav-item>
         <!--<b-nav-item class="d-md-down-none">-->
@@ -28,7 +34,7 @@
         <DefaultHeaderDropdownAccnt/>
       </b-navbar-nav>
       <AsideToggler class="d-none d-lg-block" />
-      <!--<AsideToggler class="d-lg-none" mobile />-->
+      <!--<AsideToggler class="d-lg-block" mobile />-->
     </AppHeader>
     <div class="app-body">
       <AppSidebar fixed>
