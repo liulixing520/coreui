@@ -1,17 +1,17 @@
 <template>
   <div class="wrapper">
     <div class="animated fadeIn">
-          <b-row class="align-items-center" style="padding-bottom: 1.0rem;">
-            <b-col cols="4" sm="4" md="2" class="mb-3 mb-xl-0">
-              <b-button block pressed  to="/orderMgr/newOrder/news"  variant="outline-success" aria-pressed="true">新闻订单(10)</b-button>
-            </b-col>
-            <b-col cols="4" sm="4" md="2"  class="mb-3 mb-xl-0">
-              <b-button block to="/orderMgr/newOrder/mideas"  variant="outline-success">自媒体</b-button>
-            </b-col>
-            <b-col cols="4" sm="4" md="2" class="mb-3 mb-xl-0">
-              <b-button block  to="/orderMgr/newOrder/wechat"  variant="outline-success">微信公众号</b-button>
-            </b-col>
-          </b-row>
+      <b-row class="align-items-center" style="padding-bottom: 1.0rem;">
+        <b-col cols="4" sm="4" md="2" class="mb-3 mb-xl-0">
+          <b-button block   to="/orderMgr/newOrder/news"  variant="outline-success" >新闻订单(10)</b-button>
+        </b-col>
+        <b-col cols="4" sm="4" md="2"  class="mb-3 mb-xl-0">
+          <b-button block to="/orderMgr/newOrder/mideas"  variant="outline-success">自媒体</b-button>
+        </b-col>
+        <b-col cols="4" sm="4" md="2" class="mb-3 mb-xl-0">
+          <b-button block  pressed aria-pressed="true"  to="/orderMgr/newOrder/wechat"  variant="outline-success">微信公众号</b-button>
+        </b-col>
+      </b-row>
       <b-card :header="caption" >
 
         <b-navbar type="light" variant="light">
@@ -105,8 +105,8 @@
           {key: 'orderNo',label:'订单号'},
           {key: 'title',label:'文字标题'},
           {key: 'linkurl',label:'完成链接'},
-          {key: 'name',label:'媒体名称'},
-          {key: 'source',label:'来源'},
+          {key: 'name',label:'公众号名称'},
+          {key: 'source',label:'发布位置'},
           {key: 'amount',label:'文章费用'},
           {key: 'status',label:'发布状态'},
           {key: 'createDate',label: '创建时间'},

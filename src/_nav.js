@@ -9,99 +9,90 @@ export default {
         // text: 'NEW'
       }
     },
-    {
-      title: true,
-      name: '菜单',
-      class: '',
-      wrapper: {
-        element: '',
-        attributes: {}
-      }
-    },
-    {
-      name: '公司信息管理',
-      url: '/companyMgr/companyInfo',
-      icon: 'icon-drop'
-    },
-    {
-      name: '员工管理',
-      url: '/employeeMgr',
-      icon: 'icon-pencil',
-      children: [
-        {
-          name: '员工列表',
-          url: '/employeeMgr/employeeList',
-          icon: ''
-        }]
-    },
-    {
-      name: '账户管理',
-      url: '/accountMgr',
-      icon: 'icon-drop',
-      children: [
-        {
-          name: '账户',
-          url: '/accountMgr/accountInfo',
-          icon: ''
-        },
-        {
-          name: '账户变更记录',
-          url: '/accountMgr/breadcrumbs',
-          icon: ''
-        }]
-    },
-    {
-      name: '订单管理',
-      url: '/orderMgr',
-      icon: 'icon-pencil',
-      children: [
-        {
-          name: '我的订单',
-          url: '/orderMgr/myOrder',
-          icon: ''
-        }]
-    },
-    {
-      name: '资源调取',
-      url: '/rescourceManager',
-      icon: 'icon-pencil'
-    },
-    {
-      name: '文章管理',
-      url: '/articleMgr',
-      icon: 'icon-pencil',
-      children: [
-        {
-          name: '文章发布',
-          url: '/articleMgr/articleCreate',
-          icon: ''
-        },
-        {
-          name: '文章列表',
-          url: '/articleMgr/articleList',
-          icon: ''
-        }]
-    },
-
-    {
-      name: '我的客服',
-      url: '/rescourceManager',
-      icon: 'icon-pencil'
-    },
+    // {
+    //   title: true,
+    //   name: '菜单',
+    //   class: '',
+    //   wrapper: {
+    //     element: '',
+    //     attributes: {}
+    //   }
+    // },
+    // {
+    //   name: '公司信息管理',
+    //   url: '/companyMgr/companyInfo',
+    //   icon: 'icon-drop'
+    // },
+    // {
+    //   name: '员工管理',
+    //   url: '/employeeMgr',
+    //   icon: 'icon-pencil',
+    //   children: [
+    //     {
+    //       name: '员工列表',
+    //       url: '/employeeMgr/employeeList',
+    //       icon: ''
+    //     }]
+    // },
+    // {
+    //   name: '账户管理',
+    //   url: '/accountMgr',
+    //   icon: 'icon-drop',
+    //   children: [
+    //     {
+    //       name: '账户',
+    //       url: '/accountMgr/accountInfo',
+    //       icon: ''
+    //     },
+    //     {
+    //       name: '账户变更记录',
+    //       url: '/accountMgr/breadcrumbs',
+    //       icon: ''
+    //     }]
+    // },
+    // {
+    //   name: '订单管理',
+    //   url: '/orderMgr',
+    //   icon: 'icon-pencil',
+    //   children: [
+    //     {
+    //       name: '我的订单',
+    //       url: '/orderMgr/myOrder',
+    //       icon: ''
+    //     }]
+    // },
+    // {
+    //   name: '资源调取',
+    //   url: '/rescourceManager',
+    //   icon: 'icon-pencil'
+    // },
+    // {
+    //   name: '文章管理',
+    //   url: '/articleMgr',
+    //   icon: 'icon-pencil',
+    //   children: [
+    //     {
+    //       name: '文章发布',
+    //       url: '/articleMgr/articleCreate',
+    //       icon: ''
+    //     },
+    //     {
+    //       name: '文章列表',
+    //       url: '/articleMgr/articleList',
+    //       icon: ''
+    //     }]
+    // },
+    //
+    // {
+    //   name: '我的客服',
+    //   url: '/rescourceManager',
+    //   icon: 'icon-pencil'
+    // },
     // {
     //   name: '资源管理',
     //   url: '/rescourceManager',
     //   icon: 'icon-pencil'
     // },
-    {
-      title: true,
-      name: '资源商菜单',
-      class: '',
-      wrapper: {
-        element: '',
-        attributes: {}
-      }
-    },
     {
       name: '订单管理',
       url: '/orderMgr',
@@ -114,12 +105,12 @@ export default {
         },
         {
           name: '问题订单',
-          url: '/problemOrder',
+          url: '/orderMgr/problemOrder',
           icon: ''
         },
         {
           name: '已完成订单',
-          url: '/finishedOrder',
+          url: '/orderMgr/finishOrder',
           icon: ''
         }]
     },

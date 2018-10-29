@@ -95,6 +95,12 @@ const AccountChangeList = () => import('@/views/web/accountMgr/AccountChangeList
 const EmployeeList = () => import('@/views/web/employeeMgr/EmployeeList')
 const OrderList = () => import('@/views/web/orderMgr/OrderList')
 const NewsOrderList = () => import('@/views/web/orderMgr/NewsOrderList')
+const WechatOrderList = () => import('@/views/web/orderMgr/WechatOrderList')
+const MideaOrderList = () => import('@/views/web/orderMgr/MideaOrderList')
+const FinishOrderList = () => import('@/views/web/orderMgr/FinishOrderList')
+const ProblemOrderList = () => import('@/views/web/orderMgr/ProblemOrderList')
+
+
 
 
 
@@ -205,7 +211,39 @@ const  routes=[
                   meta: {
                     requireAuth: false,
                   }
+                },
+                {
+                  path: 'mideas',
+                  name: '自媒体订单',
+                  component: MideaOrderList,
+                  meta: {
+                    requireAuth: false,
+                  }
+                },
+                {
+                  path: 'wechat',
+                  name: '微信公众号订单',
+                  component: WechatOrderList,
+                  meta: {
+                    requireAuth: false,
+                  }
                 }]
+            },
+            {
+              path: 'problemOrder',
+              name: '问题订单',
+              component: ProblemOrderList,
+              meta: {
+                requireAuth: false,
+              }
+            },
+            {
+              path: 'finishOrder',
+              name: '已完成订单',
+              component: FinishOrderList,
+              meta: {
+                requireAuth: false,
+              }
             }
           ]
         },
