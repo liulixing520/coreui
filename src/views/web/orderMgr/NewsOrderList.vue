@@ -39,16 +39,38 @@
         </b-button-group>
 
         <b-table :hover="hover" :striped="striped" :bordered="bordered" :small="small" :fixed="fixed" responsive="sm" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage">
-          <!--<template slot="status" slot-scope="data">-->
-          <!--<b-badge :variant="getBadge(data.item.status)">{{data.item.status}}</b-badge>-->
-          <!--</template>-->
+          <template slot="title" slot-scope="data">
+            <a href="javascript:void(0);" @click="largeModal = true" >{{data.item.title}}</a>
+          </template>
+          <template slot="source" slot-scope="data">
+            <a href="javascript:void(0);" @click="largeModal2 = true" >{{data.item.source}}</a>
+          </template>
         </b-table>
         <nav>
           <b-pagination :total-rows="getRowCount(items)" :per-page="perPage" v-model="currentPage" prev-text="Prev" next-text="Next" hide-goto-end-buttons/>
         </nav>
+
+        <b-modal title="金庸去世" size="lg" v-model="largeModal"  @ok="largeModal = false">
+          <h5>安排：中国产经新闻网</h5>
+          金庸（1924年3月10日-2018年10月30日），原名查良镛，生于浙江省海宁市，1948年移居香港 [1]  。当代武侠小说作家、新闻学家、企业家、政治评论家、社会活动家，“香港四大才子”之一 [1-2]  。
+          1944年考入重庆中央政治大学外交系。1946年秋，金庸进入上海《大公报》任国际电讯翻译。1948年，毕业于上海东吴大学法学院 [1]  。1952年调入《新晚报》编辑副刊，并写出《绝代佳人》、《兰花花》等电影剧本。1959年，金庸等人于香港创办《明报》 [3]  。
+          1985年起，历任香港特别行政区基本法起草委员会委员、政治体制小组负责人之一，基本法咨询委员会执行委员会委员，以及香港特别行政区筹备委员会委员。2000年，获得大紫荆勋章。2009年9月，被聘为中国作协第七届全国委员会名誉副主席 [4-5]  。同年荣获2008影响世界华人终身成就奖 [6]  。2010年，获得剑桥大学哲学博士学位 [1]  。
+          2018年10月30日，金庸在香港逝世，享年94岁。 [7]
+        </b-modal>
+
+        <b-modal title="来源" size="sm" v-model="largeModal2"  @ok="largeModal2 = false">
+          <b-table :hover="hover" :striped="striped" :bordered="bordered" :small="small" :fixed="fixed" responsive="sm" :items="citems" :fields="cfields" :current-page="currentPage" :per-page="perPage">
+            <template slot="linkurl" slot-scope="data">
+              <a href="javascript:void(0);" @click="largeModal2 = true" >{{data.item.linkurl}}</a>
+            </template>
+          </b-table>
+        </b-modal>
+
       </b-card>
     </div>
   </div>
+
+
 
 </template>
 
@@ -98,8 +120,8 @@
     data: () => {
       return {
         items: shuffleArray([
-          {orderNo: '刘大院', title: '18801044453', linkurl:"", name:"", source:"", amount:"900", status:"有效", createDate: '2018-09-08 13:15:44', remark: '备注'},
-          {orderNo: '王大妮', title: '18799900923', linkurl:"", name:"", source:"", amount:"900", status:"有效", createDate: '2018-09-08 13:15:44', remark: '备注'}
+          {orderNo: '9001212', title: '论长相的重要性', linkurl:"", name:"", source:"来源", amount:"900", status:"有效", createDate: '2018-09-08 13:15:44', remark: '备注'},
+          {orderNo: '32232422', title: '知名武侠小说作者金庸去世', linkurl:"", name:"", source:"来源", amount:"900", status:"有效", createDate: '2018-09-08 13:15:44', remark: '备注'}
         ]),
         fields: [
           {key: 'orderNo',label:'订单号'},
@@ -112,9 +134,20 @@
           {key: 'createDate',label: '创建时间'},
           {key: 'remark',label: '备注要求'}
         ],
+        cfields: [
+          {key: 'name',label:'媒体名称'},
+          {key: 'linkurl',label: '链接地址'}
+        ],
+        citems: shuffleArray([
+          {name: '论长相的重要性',  linkurl:"www.baidu.com"},
+          {name: '知名武侠小说作者金庸去世', linkurl:"www.sina.com.cn"}
+        ]),
         currentPage: 1,
         perPage: 5,
-        totalRows: 0
+        totalRows: 0,
+        largeModal: false,
+        largeModal2: false
+
       }
     },
     methods: {
