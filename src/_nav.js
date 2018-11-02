@@ -100,7 +100,7 @@ export default {
       children: [
         {
           name: '新订单',
-          url: '/orderMgr/newOrder/news',
+          url: '/orderMgr/newOrder',
           icon: ''
         },
         {
