@@ -69,7 +69,19 @@
   </div>
 </template>
 <style>
-
+  .app-header{
+    background: #15c1d7;
+  }
+  .sidebar {
+    background: #f4f4f4;
+    color: #666666;
+  }
+  .sidebar .nav-link{
+    color: #666666;
+  }
+  .sidebar .nav-link.active{
+    background: transparent;
+  }
   .sidebar .nav-dropdown .nav-dropdown-items a  {
     padding-left: 2rem;
   }

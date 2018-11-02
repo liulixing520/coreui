@@ -99,9 +99,13 @@ const WechatOrderList = () => import('@/views/web/orderMgr/WechatOrderList')
 const MideaOrderList = () => import('@/views/web/orderMgr/MideaOrderList')
 const FinishOrderList = () => import('@/views/web/orderMgr/FinishOrderList')
 const ProblemOrderList = () => import('@/views/web/orderMgr/ProblemOrderList')
-
-
-
+const WaterBill = () => import('@/views/web/accountMgrZys/WaterBill')
+const WithdrawCash = () => import('@/views/web/accountMgrZys/WithdrawCash')
+const WithdrawOperate = () => import('@/views/web/accountMgrZys/WithdrawOperate')
+const AccountSetting = () => import('@/views/web/accountMgrZys/AccountSetting')
+const NewResource = () => import('@/views/web/resourceMgr/NewResource')
+const MediaAdd = () => import('@/views/web/resourceMgr/MediaAdd')
+const WeChatAdd = () => import('@/views/web/resourceMgr/WeChatAdd')
 
 
 Vue.use(Router)
@@ -174,6 +178,108 @@ const  routes=[
               path: 'employeeList',
               name: '账户信息',
               component: EmployeeList,
+              meta: {
+                requireAuth: false,
+              }
+            }
+          ]
+        },
+        {
+          path: 'resourceMgr',
+          redirect: '/resourceMgr/newResource',
+          name: '资源管理',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'newResource',
+              name: '资源添加',
+              redirect: '/resourceMgr/newResource/resourceAdd',
+              component: {
+                render (c) { return c('router-view') }
+              },
+              meta: {
+                requireAuth: false,
+              },
+              children: [
+                {
+                  path: 'resourceAdd',
+                  name: '资源添加',
+                  component: NewResource,
+                  meta: {
+                    requireAuth: false,
+                  }
+                },
+                {
+                  path: 'mediaAdd',
+                  name: '自媒体添加',
+                  component: MediaAdd,
+                  meta: {
+                    requireAuth: false,
+                  }
+                },
+                {
+                  path: 'weChatAdd',
+                  name: '微信公众平台添加',
+                  component: WeChatAdd,
+                  meta: {
+                    requireAuth: false,
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          path: 'accountMgrZys',
+          redirect: '/accountMgrZys/waterBill',
+          name: '账户管理',
+          component: {
+            render (c) { return c('router-view') }
+          },
+          children: [
+            {
+              path: 'waterBill',
+              name: '流水账单',
+              component: WaterBill,
+              meta: {
+                requireAuth: false,
+              }
+            },
+            {
+              path: 'withdrawCash',
+              name: '提现',
+              redirect: '/accountMgrZys/withdrawCash/cash',
+              component: {
+                render (c) { return c('router-view') }
+              },
+              meta: {
+                requireAuth: false,
+              },
+              children: [
+                {
+                  path: 'cash',
+                  name: '提现',
+                  component: WithdrawCash,
+                  meta: {
+                    requireAuth: false,
+                  }
+                },
+                {
+                  path: 'operate',
+                  name: '提现操作',
+                  component: WithdrawOperate,
+                  meta: {
+                    requireAuth: false,
+                  }
+                }
+              ]
+            },
+            {
+              path: 'accountSetting',
+              name: '账户设置',
+              component: AccountSetting,
               meta: {
                 requireAuth: false,
               }
