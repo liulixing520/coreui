@@ -23,7 +23,7 @@
     "prod": "vue-cli-service build --mode=production",
     "uat": "vue-cli-service build --mode=test",
     "serve": "vue-cli-service serve --open",
-    "build": "cross-env NODE_ENV=production env_config=prod node build/build.js",
+    "build": "NODE_ENV=production env_config=prod node build/build.js",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"
