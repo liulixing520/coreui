@@ -1,31 +1,40 @@
 <template>
-  <div id="water_bill">
-    <b-navbar type="light" variant="light">
-      <b-nav-form >
-        创建开始时间：<b-form-input label="" class="mr-sm-2" type="date" v-model="startDate"></b-form-input>
-        创建结束时间：<b-form-input label="" class="mr-sm-2" type="date" v-model="endDate"></b-form-input>
-        账单种类：
-        <b-form-select id="basicSelectLg"
-         v-model="accountType"
-         :plain="true"
-         :options="['收入','提现', '退稿扣款', '提现失败返还']"
-         value="请选择">
-        </b-form-select>
-        <div style="padding-left: 0.5rem;">
-          <b-button variant="outline-success" class="my-2 my-sm-0"  type="submit">查询</b-button>
-        </div>
-      </b-nav-form>
-    </b-navbar>
-    <b-table :hover="hover" :striped="striped" :bordered="bordered" :small="small" :fixed="fixed" responsive="sm" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage"></b-table>
-    <nav>
-      <b-pagination :total-rows="getRowCount(items)" :per-page="perPage" v-model="currentPage" prev-text="上一页" next-text="下一页" hide-goto-end-buttons/>
-    </nav>
-  </div>
+  <b-card :header="caption" >
+    <div id="water_bill">
+      <b-navbar type="light" variant="light">
+        <b-nav-form >
+          创建开始时间：<b-form-input label="" class="mr-sm-2" type="date" v-model="startDate"></b-form-input>
+          创建结束时间：<b-form-input label="" class="mr-sm-2" type="date" v-model="endDate"></b-form-input>
+          账单种类：
+          <b-form-select id="basicSelectLg"
+                         v-model="accountType"
+                         :plain="true"
+                         :options="['收入','提现', '退稿扣款', '提现失败返还']"
+                         value="请选择">
+          </b-form-select>
+          <div style="padding-left: 0.5rem;">
+            <b-button variant="outline-success" class="my-2 my-sm-0"  type="submit">查询</b-button>
+          </div>
+        </b-nav-form>
+      </b-navbar>
+      <b-table :hover="hover" :striped="striped" :bordered="bordered" :small="small" :fixed="fixed" responsive="sm" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage"></b-table>
+      <nav>
+        <b-pagination :total-rows="getRowCount(items)" :per-page="perPage" v-model="currentPage" prev-text="上一页" next-text="下一页" hide-goto-end-buttons/>
+      </nav>
+    </div>
+  </b-card>
+
 </template>
 
 <script>
   export default {
     name: "water-bill",
+    props: {
+      caption: {
+        type: String,
+        default: '流水账单'
+      }
+    },
     data() {
       return {
         startDate: '', // 开始时间

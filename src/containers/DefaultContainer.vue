@@ -63,7 +63,7 @@
       </div>
       <div class="ml-auto">
         <span class="mr-1">Powered by</span>
-        <a href="https://coreui.io">共享媒介共享媒介</a>
+        <a href="https://coreui.io">共享媒介</a>
       </div>
     </TheFooter>
   </div>

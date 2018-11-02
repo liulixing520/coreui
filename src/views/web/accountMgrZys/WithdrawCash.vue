@@ -1,6 +1,6 @@
 <template>
+  <b-card :header="caption" >
   <div id="withdraw_cash">
-    <b-card :header="caption" >
       <b-navbar type="light" variant="light">
         <b-nav-form >
           可提现金额：<b-form-input :readonly='true' label="" class="mr-sm-2" type="text" v-model="limitNum"></b-form-input>
@@ -9,12 +9,12 @@
           </div>
         </b-nav-form>
       </b-navbar>
-    </b-card>
     <b-table :hover="hover" :striped="striped" :bordered="bordered" :small="small" :fixed="fixed" responsive="sm" :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage"></b-table>
     <nav>
       <b-pagination :total-rows="getRowCount(items)" :per-page="perPage" v-model="currentPage" prev-text="上一页" next-text="下一页" hide-goto-end-buttons/>
     </nav>
   </div>
+  </b-card>
 </template>
 
 <script>
