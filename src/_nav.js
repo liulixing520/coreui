@@ -126,7 +126,7 @@ export default {
         },
         {
           name: '提现',
-          url: '/accountMgrZys/withdrawCash',
+          url: '/accountMgrZys/withdrawCash/cash',
           icon: ''
         },
         {
